@@ -1,11 +1,17 @@
-import dataSet from "data/"
-// Variables
-let skeleton; // Storing the skeleton data
-let positions; // Storing the joint positions
-let positions_scaled; // Storing the scaled joint positions
-const figureScale = 2; // The scaling factor for our visualizations
-const h = 200; // The height of the visualization
-const w = 400; // The width of the visualization
+import * as PropTypes from "prop-types";
+import dataSet from "../data/test_data.json";
+import { preProcess } from "./dataManipulation/preProcess";
+import { MyFirstThree } from "./experiments/myFirstThree";
 
-function draw() {
+function main({ dataSet }) {
+  const data = preProcess({ frames: dataSet.Frames });
+  const threeTest = new MyFirstThree();
+  threeTest.init().initFrames({ frames: data }).animateFrames();
 }
+main.propTypes = {
+  dataSet: PropTypes.shape({
+    Frames: PropTypes.array,
+  }).isRequired,
+};
+
+main({ dataSet });

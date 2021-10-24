@@ -4,7 +4,18 @@
   "main": "src/index.js",
   "license": "MIT",
   "dependencies": {
-    "prettier": "^2.4.1"
+    "d3": "^7.1.1",
+    "d3-3d": "^0.1.2",
+    "d3-color": "^3.0.1",
+    "d3-drag": "^3.0.0",
+    "d3-scale": "^4.0.2",
+    "d3-selection": "^3.0.0",
+    "d3-x3d": "^2.0.10",
+    "jquery": "^3.6.0",
+    "lodash": "^4.17.21",
+    "prettier": "^2.4.1",
+    "prop-types": "^15.7.2",
+    "three": "^0.133.1"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
